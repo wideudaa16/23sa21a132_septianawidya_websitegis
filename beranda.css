@@ -1,0 +1,90 @@
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('../img/map.jpg') center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(29, 39, 62, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    animation: fadeUp 1.4s ease;
+}
+
+.title {
+    font-size: 55px;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 22px;
+    opacity: 0.85;
+}
+
+.btn-start {
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: #3b82f6;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(59,130,246,0.4);
+    transition: 0.3s ease;
+}
+
+.btn-start:hover {
+    background: #2563eb;
+    transform: translateY(-4px);
+}
+
+/* FITUR */
+.fitur {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.fitur-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+    animation: slideIn 1.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}

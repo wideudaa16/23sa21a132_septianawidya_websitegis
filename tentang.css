@@ -1,0 +1,54 @@
+.about-section {
+    padding: 70px 10%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* FOTO PROFIL */
+.profile-card {
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 290px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    animation: fadeSlide 1.2s ease;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.major {
+    color: #475569;
+}
+
+/* KARTU INFORMASI */
+.info-card {
+    flex: 1;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    animation: slideUp 1s ease;
+}
+
+.info-card ul {
+    line-height: 1.8;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}

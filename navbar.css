@@ -1,0 +1,80 @@
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #1e293b;
+    padding: 14px 28px;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: fadeDown 0.8s ease;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    position: relative;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+/* ANIMASI HOVER – glow + lift */
+.nav-links a:hover {
+    color: white;
+    background: #334155;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.15);
+}
+
+/* ANIMASI ACTIVE */
+.nav-links a.active {
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 4px 14px rgba(59,130,246,0.35);
+}
+
+/* ANIMASI RIPPLE EFFECT */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.nav-links a:hover::after {
+    width: 200%;
+    height: 200%;
+    transform: scale(1);
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+}
+
+/* GLOBAL ANIMATION */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
